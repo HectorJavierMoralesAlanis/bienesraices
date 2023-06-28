@@ -1,9 +1,9 @@
 <?php
      //Base de datos
-    include ('../../aux2.php');
+    include ('aux2.php');
     $dao1=new DAO();
     $consulta1="SELECT * FROM Propiedades";
-    $propiedades=$dao2->ejecutarConsulta($consulta1);
+    $propiedades=$dao1->ejecutarConsulta($consulta1);
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $vendedores=$dao2->ejecutarConsulta($consulta2);
