@@ -46,7 +46,6 @@
             </div><!--anuncio-->
             <?php }?>
 
-
         </div> <!--.contenedor-anuncios-->
     </main>
 
