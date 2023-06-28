@@ -14,6 +14,7 @@
                         "telefono"=>"$_POST[telefono]"
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
+        echo $resultados;
         if($resultados>=0){
             header("http://143.198.163.107/bienesraices/admin/index.php");
         }else{
