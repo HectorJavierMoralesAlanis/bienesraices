@@ -1,5 +1,6 @@
 <?php
     //Base de datos
+    echo "hola";
     include_once('../bienesraices/PDO/DAO.php');
     require '../../includes/funciones.php';
     incluirTemplates('header');
