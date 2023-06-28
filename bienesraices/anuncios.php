@@ -18,8 +18,8 @@
             <div class="anuncio">
                 <picture>
                     <source srcset="build/img/anuncio1.webp" type="image/webp">
-                    <source srcset="build/img/anuncio1.jpg" type="image/jpeg">
-                    <img loading="lazy" src=<?php echo $propiedad['imagen']?> alt="anuncio">
+                    <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
+                    <img loading="lazy" src="<?php echo $propiedad['imagen']?>" alt="anuncio">
                 </picture>
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
