@@ -4,7 +4,9 @@
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $user_access=$dao2->ejecutarConsulta($consulta2);
-    echo $user_access[0];
+    foreach($user_access as $valor){
+        echo $valor;
+    }
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         $dao = new DAO();
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
