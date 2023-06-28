@@ -3,7 +3,7 @@
     echo $_POST['nombre'];
     echo $_POST['apellido'];
     echo $_POST['telefono'];
-    include ('./PDO/DAO.php');
+    include ('../bienesraices/aux2.php');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         echo "entra";
         $dao = new DAO();
