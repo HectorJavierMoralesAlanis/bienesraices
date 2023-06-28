@@ -4,7 +4,7 @@
     echo $_POST['apellido'];
     echo $_POST['telefono'];
     include ('./aux2.php');
-    if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
+    /*if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         echo "entra";
         $dao = new DAO();
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
@@ -20,7 +20,7 @@
         }
     }else{
         echo "error";
-    }
+    }*/
     require '../../includes/funciones.php';
     incluirTemplates('header');
 ?>
