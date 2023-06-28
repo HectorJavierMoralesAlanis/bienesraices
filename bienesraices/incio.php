@@ -9,7 +9,7 @@
         <div class="iconos-nosotros">
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
-                <h3><a href="/entrada.php">Seguridad</a></h3>
+                <h3><a href="/../bienesraices/blog.php">Seguridad</a></h3>
             </div>
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
