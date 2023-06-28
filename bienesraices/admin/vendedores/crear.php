@@ -15,7 +15,7 @@
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
-            header("http://143.198.163.107/bienesraices/admin/index.php");
+            header("/admin/index.php");
         }else{
             echo "error";
         }
