@@ -1,9 +1,8 @@
 <?php
-    
+
     class DAO{
         //Se crea la variable conexion
         private $conexion;
-
         //Se crea la funcion construct
         public function __construct(){
             //try and cath
