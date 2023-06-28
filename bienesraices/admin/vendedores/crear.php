@@ -1,6 +1,8 @@
 <?php
     //Base de datos
     echo $_POST['nombre'];
+    echo $_POST['apellido'];
+    echo $_POST['telefono'];
     include_once('../bienesraices/PDO/DAO.php');
     require '../../includes/funciones.php';
     incluirTemplates('header');
@@ -33,10 +35,10 @@
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
 
                 <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" placeholder="Apellido">
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
 
                 <label for="telefono">Telefono:</label>
-                <input type="text" id="telefono" placeholder="Telefono">
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono">
             </fieldset>
             <button type="sumbit" class="boton boton-verde">Crear Vendedor</button>
         </form>
