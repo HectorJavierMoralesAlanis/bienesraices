@@ -28,7 +28,6 @@
                         <a href="/../bienesraices/admin2/inicio.php">Contacto</a>
                     </nav>
                 </div>
-   
                 
             </div> <!--.barra-->
 
