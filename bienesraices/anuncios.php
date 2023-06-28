@@ -40,7 +40,6 @@
                             <p><?php echo $propiedad['habitaciones']?></p>
                         </li>
                     </ul>
-
                     <a href="anuncio.php" class="boton-amarillo-block">
                         Ver Propiedad
                     </a>
