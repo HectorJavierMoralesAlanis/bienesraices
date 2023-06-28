@@ -65,9 +65,9 @@
                 
                 <select name="vendedor">
                     <option selected>Opciones</option>
-                    <?php foreach($user_access as $row)?>
+                    <?php foreach($user_access as $row){?>
                         <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
-                    <?php ?>
+                    <?php }?>
                 </select>
             </fieldset>
 
