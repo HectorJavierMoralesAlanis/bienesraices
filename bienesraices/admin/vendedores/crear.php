@@ -17,7 +17,7 @@
         if($resultados>=0){
             header("http://143.198.163.107/bienesraices/admin/index.php");
         }else{
-            header("http://143.198.163.107/bienesraices/admin/index.php");
+            echo "error";
         }
     }else{
         echo "error";
