@@ -1,13 +1,8 @@
 <?php
     //Base de datos
-    echo $_POST['nombre'];
-    echo $_POST['apellido'];
-    echo $_POST['telefono'];
     include ('../../aux2.php');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
-        echo "entra";
         $dao = new DAO();
-        echo "asdjkf";
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
         $parametros=array("nombre"=>"$_POST[nombre]",
                         "apellido"=>"$_POST[apellido]",
@@ -20,7 +15,6 @@
             echo "error";
         }
     }else{
-        echo "error";
     }
     require '../../includes/funciones.php';
     incluirTemplates('header');
