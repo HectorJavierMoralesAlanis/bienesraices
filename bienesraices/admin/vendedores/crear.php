@@ -1,8 +1,22 @@
 <?php
     //Base de datos
-
+    include_once('./Coneccion/DAO.php');
     require '../../includes/funciones.php';
     incluirTemplates('header');
+    if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
+        $dao = new DAO();
+        $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
+        $parametros=array("nombre"=>"$_POST[nombre]",
+                        "apellido"=>"$_POST[apellido]",
+                        "telefono"=>"$_POST[telefono]"
+        );
+        $resultados=$dao->insertarConsulta($consulta,$parametros);
+        if($resultados>=0){
+            header("http://143.198.163.107/bienesraices/admin/index.php");
+        }else{
+            echo "error";
+        }
+    }
 ?>
 
     <main class="contenedor seccion">
@@ -10,7 +24,7 @@
 
         <a href="/bienesraices/admin/index.php" class="boton boton-verde">Volver</a>
 
-        <form class="formulario">
+        <form class="formulario" method="POST" action="./crear.php">
             <fieldset>
                 <legend>Información General</legend>
 
@@ -22,9 +36,6 @@
 
                 <label for="telefono">Telefono:</label>
                 <input type="text" id="telefono" placeholder="Telefono">
-
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion"></textarea>
             </fieldset>
             <input type="sumbit" value="Crear Vendedor" class="boton boton-verde">
         </form>
