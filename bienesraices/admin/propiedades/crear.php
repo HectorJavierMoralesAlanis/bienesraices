@@ -74,7 +74,7 @@
                 </select>
             </fieldset>
 
-            <boton type="sumbit" class="boton boton-verde">Crear Propiedad</boton>
+            <button type="sumbit" class="boton boton-verde">Crear Propiedad</button>
         </form>
     </main>
 
