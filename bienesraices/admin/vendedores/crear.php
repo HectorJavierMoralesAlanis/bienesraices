@@ -4,8 +4,6 @@
     echo $_POST['apellido'];
     echo $_POST['telefono'];
     include_once('../bienesraices/PDO/DAO.php');
-    require '../../includes/funciones.php';
-    incluirTemplates('header');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         $dao = new DAO();
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
@@ -21,6 +19,8 @@
             header("http://143.198.163.107/bienesraices/admin/index.php");
         }
     }
+    require '../../includes/funciones.php';
+    incluirTemplates('header');
 ?>
 
     <main class="contenedor seccion">
