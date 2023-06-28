@@ -9,6 +9,7 @@
         $dao = new DAO();
         $fecha=date('Y-m-d H:i:s');
         $consulta="INSERT INTO Propiedades (titulo,precio,imagen,descripcion,habitaciones,wc,estacionamiento,creado,vendedores_id)"."VALUES(:titulo,:precio,:imagen,:descripcion,:habitaciones,:wc,:estacionamiento,:fecha,:id_vendedores)";
+        
         $parametros=array("titulo"=>"$_POST[titulo]",
                         "precio"=>"$_POST[precio]",
                         "imagen"=>"$_POST[imagen]",
