@@ -7,6 +7,7 @@
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         echo "entra";
         $dao = new DAO();
+        echo "asdjkf";
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
         $parametros=array("nombre"=>"$_POST[nombre]",
                         "apellido"=>"$_POST[apellido]",
@@ -18,6 +19,7 @@
         }else{
             header("http://143.198.163.107/bienesraices/admin/index.php");
         }
+        
     }else{
         echo "error";
     }
