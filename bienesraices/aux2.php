@@ -36,7 +36,6 @@
                 return 0;
             }
         }
-        
         //Funcion para ejecutar las consultas INSERT,UPDATE,DELETE
         public function insertarConsulta($sql="",$valores=array()){
             if($sql!=""&&strlen($sql)>0){
