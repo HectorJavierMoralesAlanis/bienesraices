@@ -12,7 +12,6 @@
 ?>
 
     <main class="contenedor seccion">
-
         <h2>Casas y Depas en Venta</h2>
         <div class="contenedor-anuncios">
             <?php foreach($propiedades as $propiedad){?>
