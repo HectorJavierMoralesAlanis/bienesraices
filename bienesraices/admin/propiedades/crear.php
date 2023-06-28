@@ -26,6 +26,7 @@
             echo "error";
         }
     }else{
+        
     }
     require '../../includes/funciones.php';
     incluirTemplates('header');
