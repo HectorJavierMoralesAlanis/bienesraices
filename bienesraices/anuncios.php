@@ -23,7 +23,6 @@
                     <source srcset="build/img/anuncio1.jpg" type="image/jpeg">
                     <img loading="lazy" src=<?php echo $propiedad['imagen']?> alt="anuncio">
                 </picture>
-
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
                     <p><?php echo $propiedad['descripcion']?></p>
