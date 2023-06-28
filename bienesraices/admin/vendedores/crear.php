@@ -6,7 +6,6 @@
     include_once('/PDO/DAO.php');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         $dao = new DAO();
-        echo "Fuck you";
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
         $parametros=array("nombre"=>"$_POST[nombre]",
                         "apellido"=>"$_POST[apellido]",
