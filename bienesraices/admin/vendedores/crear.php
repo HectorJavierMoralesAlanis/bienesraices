@@ -30,7 +30,7 @@
                 <legend>Información General</legend>
 
                 <label for="nombre">Nombre del vendedor:</label>
-                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
 
                 <label for="apellido">Apellido:</label>
                 <input type="text" id="apellido" placeholder="Apellido">
