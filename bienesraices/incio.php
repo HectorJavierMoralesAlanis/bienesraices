@@ -4,7 +4,7 @@
 ?>
 
     <main class="contenedor seccion">
-        <h1>Más Sobre Nosotros</h1>
+        <h1>Admin</h1>
 
         <div class="iconos-nosotros">
             <div class="icono">
