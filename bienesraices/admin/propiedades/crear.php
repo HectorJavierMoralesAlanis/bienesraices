@@ -10,8 +10,9 @@
         $fecha=date('Y-m-d H:i:s');
         $consulta="INSERT INTO propiedades (titulo,precio,imagen,descripcion,habitaciones,wc,estacionamiento,creado,vendedores_id)"."VALUES(:titulo,:precio,:imagen,:descripcion,:habitaciones,:wc,:estacionamiento,:fecha,:id_vendedores)";
         $parametros=array("titulo"=>"$_POST[titulo]",
-                        "precio"=>"$_POST[imagen]",
-                        "imagen"=>"$_POST[descripcion]",
+                        "precio"=>"$_POST[precio]",
+                        "imagen"=>"$_POST[imagen]",
+                        "descripcion"=>"$_POST[descripcion]",
                         "habitaciones"=>"$_POST[habitaciones]",
                         "wc"=>"$_POST[wc]",
                         "estacionamiento"=>"$_POST[estacionamiento]",
