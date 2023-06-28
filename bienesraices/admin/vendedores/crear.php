@@ -1,6 +1,6 @@
 <?php
     //Base de datos
-    include_once('./Coneccion/DAO.php');
+    include_once('../bienesraices/PDO/DAO.php');
     require '../../includes/funciones.php';
     incluirTemplates('header');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
