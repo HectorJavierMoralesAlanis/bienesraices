@@ -17,7 +17,7 @@
                         "wc"=>"$_POST[wc]",
                         "estacionamiento"=>"$_POST[estacionamiento]",
                         "fecha"=>$fecha,
-                        "id_vendedor"=>"$_POST[vendedor]",
+                        "id_vendedores"=>"$_POST[vendedor]",
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
@@ -26,7 +26,7 @@
             echo "error";
         }
     }else{
-        
+
     }
     require '../../includes/funciones.php';
     incluirTemplates('header');
