@@ -24,7 +24,7 @@
                         <a href="nosotros.php">Nosotros</a>
                         <a href="anuncios.php">Anuncios</a>
                         <a href="blog.php">Blog</a>
-                        <a href="incio.php">Contacto</a>
+                        <a href="/admin2/inicio.php">Contacto</a>
                     </nav>
                 </div>
                 
