@@ -37,7 +37,7 @@
                 <label for="telefono">Telefono:</label>
                 <input type="text" id="telefono" placeholder="Telefono">
             </fieldset>
-            <input type="sumbit" value="Crear Vendedor" class="boton boton-verde">
+            <button type="sumbit" class="boton boton-verde">Crear Vendedor</button>
         </form>
     </main>
 
