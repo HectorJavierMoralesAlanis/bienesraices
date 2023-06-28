@@ -4,15 +4,18 @@
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $user_access=$dao2->ejecutarConsulta($consulta2);
-    foreach($user_access as $valor){
-        echo $valor['nombre'];
-    }
-    if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
+    if(isset($_POST['titulo'],$_POST['precio'],$_POST['imagen'],$_POST['descripcion'],$_POST['habitaciones'],$_POST['wc'],$_POST['estacionamiento'],$_POST['vendedor'])){
         $dao = new DAO();
-        $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
-        $parametros=array("nombre"=>"$_POST[nombre]",
-                        "apellido"=>"$_POST[apellido]",
-                        "telefono"=>"$_POST[telefono]"
+        $fecha=date('Y-m-d H:i:s');
+        $consulta="INSERT INTO propiedades (titulo,precio,imagen,descripcion,habitaciones,wc,estacionamiento,creado,vendedores_id)"."VALUES(:titulo,:precio,:imagen,:descripcion,:habitaciones,:wc,:estacionamiento,:fecha,:id_vendedores)";
+        $parametros=array("titulo"=>"$_POST[titulo]",
+                        "precio"=>"$_POST[imagen]",
+                        "imagen"=>"$_POST[descripcion]",
+                        "habitaciones"=>"$_POST[habitaciones]",
+                        "wc"=>"$_POST[wc]",
+                        "estacionamiento"=>"$_POST[estacionamiento]",
+                        "fecha"=>$fecha,
+                        "id_vendedor"=>"$_POST[vendedor]",
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
@@ -66,7 +69,7 @@
                 <select name="vendedor">
                     <option selected>Opciones</option>
                     <?php foreach($user_access as $row){?>
-                        <option value="<?php echo $row['nombre']?>"><?php echo $row['nombre']?></option>
+                        <option value="<?php echo $row['id']?>"><?php echo $row['nombre']?></option>
                     <?php }?>
                 </select>
             </fieldset>
