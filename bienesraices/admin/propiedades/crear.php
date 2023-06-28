@@ -5,7 +5,7 @@
     $consulta2="SELECT * FROM vendedores";
     $user_access=$dao2->ejecutarConsulta($consulta2);
     foreach($user_access as $valor){
-        echo $valor;
+        echo $valor['nombre'];
     }
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
         $dao = new DAO();
