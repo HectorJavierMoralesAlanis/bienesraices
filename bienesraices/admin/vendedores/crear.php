@@ -5,6 +5,7 @@
     echo $_POST['telefono'];
     include_once('/PDO/DAO.php');
     if(isset($_POST['nombre'],$_POST['apellido'],$_POST['telefono'])){
+        echo "entra";
         $dao = new DAO();
         $consulta="INSERT INTO vendedores (nombre,apellido,telefono)"."VALUES(:nombre,:apellido,:telefono)";
         $parametros=array("nombre"=>"$_POST[nombre]",
@@ -12,7 +13,6 @@
                         "telefono"=>"$_POST[telefono]"
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
-        echo $resultados;
         if($resultados>=0){
             header("http://143.198.163.107/bienesraices/admin/index.php");
         }else{
