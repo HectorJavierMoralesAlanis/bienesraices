@@ -6,8 +6,8 @@
     //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
     $dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
-    $consulta = "SELECT * FROM Propiedades WHERE id =: imagen";
-    $parametros = array("imagen"=>$secureId);
+    $consulta = "SELECT * FROM Propiedades WHERE id =: id";
+    $parametros = array("id"=>$secureId);
     $r= $dao->ejecutarConsulta($consulta,$parametros);
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
