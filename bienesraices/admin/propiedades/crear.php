@@ -7,17 +7,13 @@
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
         
         //Crear carpeta
-        $carpetaImagenes = '../../imagenes';
-
-        if(!is_dir($carpetaImagenes)){
-            mkdir($carpetaImagenes);
-        }
+        $nombreImagen = md5(uniqid(rand(),true));
+        move_uploaded_file($imagen['tmp_name'],'../../imagenes'.'/archivo.jpg');
         exit;
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
             "VALUES (:titulo, :precio, :imagen, :descripcion, :habitaciones, :wc, :estacionamiento, :fecha, :id_vendedores)";
-
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
