@@ -7,7 +7,7 @@
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
         
         //Crear carpeta
-        $carpetaImagen = '../../imagenes';
+        $carpetaImagenes = '../../imagenes';
 
         if(!is_dir($carpetaImagenes)){
             mkdir($carpetaImagenes);
