@@ -8,8 +8,8 @@
     $consulta="SELECT * FROM Propiedades WHERE id =: id";
     
     $parametros=array("id"=>$id);
-    /*
-    $propiedades=$dao->ejecutarConsulta($consulta,$parametros);*/
+    
+    $propiedad=$dao->ejecutarConsulta($consulta,$parametros);
     require 'includes/funciones.php';
     incluirTemplates('header');
 ?>
