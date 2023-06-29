@@ -1,6 +1,6 @@
 <?php
      //Base de datos
-    include ('retornoImagen.php');
+    //include ('retornoImagen.php');
     include ('aux2.php');
     $dao1=new DAO();
     $consulta1="SELECT * FROM Propiedades";
