@@ -23,6 +23,7 @@
                         "id_vendedores"=>"$_POST[vendedor]",
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
+        echo "dskln";
         if($resultados>=0){
             echo "dlasfkn";
             header("/admin/index.php");
