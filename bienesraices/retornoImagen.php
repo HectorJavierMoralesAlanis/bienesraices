@@ -37,7 +37,7 @@
 
     // El nombre del archivo original, esto para regresar la respuesta con el
     // nombre del archivo original.
-    $nombreArchivo = $r["nombre_archivo"];
+    $nombreArchivo = $r["titulo"];
 
     // Obtenemos la extensión del archivo, esto para determinar el tipo de
     // archivo que vamos a regresar.
