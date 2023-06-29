@@ -22,7 +22,7 @@
                 <picture>
                     <source srcset=<?php echo $propiedad['imagen']?> type="image/webp">
                     <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
-                    <img loading="lazy" src="#" alt="anuncio">                    
+                    <img loading="lazy"  alt="anuncio">                    
                 </picture>
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
