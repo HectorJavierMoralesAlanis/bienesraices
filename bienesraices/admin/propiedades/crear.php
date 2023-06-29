@@ -1,7 +1,7 @@
 <?php
     //Base de datos
     include ('./../../aux2.php');
-    echo $imagen;
+    //echo $imagen;
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $user_access=$dao2->ejecutarConsulta($consulta2);
