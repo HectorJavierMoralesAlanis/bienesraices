@@ -4,9 +4,15 @@
     $dao2 = new DAO();
     $consulta2 = "SELECT * FROM vendedores";
     $user_access = $dao2->ejecutarConsulta($consulta2);
-    var_dump($_FILES);
-    /*
-    if (isset($_POST['titulo'], $_POST['precio'], $_POST['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
+    if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
+        
+        //Crear carpeta
+        $carpetaImagen = '../../imagenes';
+
+        if(!is_dir($carpetaImagenes)){
+            mkdir($carpetaImagenes);
+        }
+        exit;
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
@@ -15,7 +21,7 @@
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
-            "imagen" => addslashes(file_get_contents($_FILES['imagen']['tmp_name'])),
+            "imagen" => $_FILES['imagen'],
             "descripcion" => $_POST['descripcion'],
             "habitaciones" => $_POST['habitaciones'],
             "wc" => $_POST['wc'],
@@ -33,7 +39,6 @@
             echo "error";
         }
     }
-    */
     require '../../includes/funciones.php';
     incluirTemplates('header');
 ?>
