@@ -4,12 +4,11 @@
     $dao2 = new DAO();
     $consulta2 = "SELECT * FROM vendedores";
     $user_access = $dao2->ejecutarConsulta($consulta2);
-    echo $_FILES['imagen'];
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
         echo "oasd";
         //Crear carpeta
         $nombreImagen = md5(uniqid(rand(),true));
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../../imagenes'.'/archivo.jpg');
+        move_uploaded_file($_FILES['imagen']['tmp_name'],'../imagenes'.'/archivo.jpg');
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
@@ -32,10 +31,8 @@
             header("Location: ../../admin/index.php");
             exit();
         } else {
-            echo "error";
         }
     }else {
-        echo "errpor";
     }
     require '../../includes/funciones.php';
     incluirTemplates('header');
