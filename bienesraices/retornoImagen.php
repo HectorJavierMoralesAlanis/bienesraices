@@ -12,7 +12,7 @@
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
-    // Ruta completa de donde se guardó el archivo. El archivo debió guardarse en
+    // Ruta completa de donde se guardó  el archivo. El archivo debió guardarse en
     // el directorio de archivos subidos, además que debió guardarse con el nombre
     // de archivo que es el secureId
     $rutaArchivo = DIR_UPLOADS . $secureId;
@@ -50,7 +50,7 @@
     header("Content-Length: $tamaño");
 
     // Enviamos el archivo como respuesta.
-    readfile($rutaArchivo);
-    //echo file_get_contents($rutaArchivo);  // Otra forma de regresar archivo como respuesta.
+    //readfile($rutaArchivo);
+    echo file_get_contents($rutaArchivo);  // Otra forma de regresar archivo como respuesta.
 
 ?>
