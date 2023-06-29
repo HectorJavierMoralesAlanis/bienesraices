@@ -14,8 +14,8 @@
         $dao = new DAO();
         
         $fecha = date('Y-m-d H:i:s');
-        $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
-            "VALUES (:titulo, :precio, :imagen, :descripcion, :habitaciones, :wc, :estacionamiento, :fecha, :id_vendedores)";
+        $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id, nombre_archivo) " .
+            "VALUES (:titulo, :precio, :imagen, :descripcion, :habitaciones, :wc, :estacionamiento, :fecha, :id_vendedores, :nombre_archivo )";
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
@@ -26,6 +26,7 @@
             "estacionamiento" => $_POST['estacionamiento'],
             "fecha" => $fecha,
             "id_vendedores" => $_POST['vendedor'],
+            "nombre_archivo" => $_FILES['imagen']['tmp_name'] 
         );
 
         $resultados = $dao->insertarConsulta($consulta, $parametros);
