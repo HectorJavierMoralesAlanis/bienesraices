@@ -55,6 +55,6 @@
     incluirTemplates('footer');
 ?>
 
-    <script src="build/js/bundle.min.js"></script>
+    <script src="<?php echo APP_PATH ?>build/js/bundle.min.js"></script>
 </body>
 </html>
