@@ -7,11 +7,24 @@
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $vendedores=$dao2->ejecutarConsulta($consulta2);
+
+    // Obtenemos la extensión del archivo, esto para determinar el tipo de
+    // archivo que vamos a regresar.
+    $extension = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
+
+    // Determinamos el content-type a partir de la extensión del archivo.
+    // El content-type le dice al client (el web browser) qué tipo de archivo
+    // es y como tratar este archivo. Por ejemplo, si es un image/jpeg el web
+    // browser puede desplegar este tipo de archivo, puesto que es una imagen;
+    // si es un application/pdf, el web brower lo desplegara con su complemento
+    // para ver archivos PDF.
+    $contentType = 
+            array_key_exists($extension, $CONTENT_TYPES_EXT) ? 
+            $CONTENT_TYPES_EXT[$extension] : $CONTENT_TYPES_EXT["bin"];
+
+
     require 'includes/funciones.php';
     incluirTemplates('header');
-    foreach($propiedades as $propiedad){
-        echo $propiedad['imagen'];
-    }
 ?>
 
 
