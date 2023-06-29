@@ -5,10 +5,10 @@
     // Consultamos el registro del archivo/foto subido en la base de datos.
     //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
-    $db = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
+    $dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
     $consulta = "SELECT * FROM Propiedades WHERE imagen =: imagen";
     $parametros = array("imagen"=>$secureId);
-    $r= $db->ejecutarConsulta($consulta,$parametros);
+    $r= $dao->ejecutarConsulta($consulta,$parametros);
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
