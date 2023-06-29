@@ -1,7 +1,6 @@
 <?php
      //Base de datos
     define("APP_PATH","/var/www/html/bienesraices/");
-    echo APP_PATH;
     include ('aux2.php');
     $dao1=new DAO();
     $consulta1="SELECT * FROM Propiedades";
