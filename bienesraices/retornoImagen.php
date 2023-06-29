@@ -2,7 +2,7 @@
     include ('aux2.php');
     $secureId = filter_input(INPUT_GET, "s_id");
     // Consultamos el registro del archivo/foto subido en la base de datos.
-    $sqlCmd = "SELECT * FROM propiedades WHERE imagen = ?";  // SQL query.
+    $sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     $params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
     $db = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
     $stmt = $dao->ejecutarConsulta($sqlCmd,$parms);  // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
