@@ -11,4 +11,4 @@
         <p class="copyright">PoliWeb - Todos los derechos Reservados <?php echo date('Y'); ?> &copy;</p>
     </footer>
 
-    <!--<script src="/bienesraices/build/js/bundle.min.js"></script>-->
+    <script src="/bienesraices/build/js/bundle.min.js"></script>
