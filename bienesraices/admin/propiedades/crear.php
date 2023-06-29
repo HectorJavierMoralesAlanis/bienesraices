@@ -34,6 +34,8 @@
         } else {
             echo "error";
         }
+    }else {
+        echo "errpor";
     }
     require '../../includes/funciones.php';
     incluirTemplates('header');
