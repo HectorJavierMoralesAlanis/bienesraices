@@ -24,6 +24,7 @@
         );
         $resultados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
+            echo "dlasfkn";
             header("/admin/index.php");
         }else{
             echo "error";
