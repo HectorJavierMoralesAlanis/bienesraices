@@ -9,7 +9,7 @@
         echo "oasd";
         //Crear carpeta
         $nombreImagen = md5(uniqid(rand(),true));
-        move_uploaded_file($imagen['tmp_name'],'../../imagenes'.'/archivo.jpg');
+        move_uploaded_file($_FILES['tmp_name'],'../../imagenes'.'/archivo.jpg');
         exit;
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
