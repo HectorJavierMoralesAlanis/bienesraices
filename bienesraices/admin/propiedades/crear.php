@@ -49,7 +49,7 @@
                 <input type="number" id="precio" name="precio" placeholder="Precio Propiedad">
 
                 <label for="imagen">Imagen:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/jpg, image/png">
+                <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png">
 
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion"></textarea>
