@@ -1,4 +1,5 @@
 <?php
+    define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
     // Base de datos
     include ('./../../aux2.php');
     $dao2 = new DAO();
@@ -8,7 +9,7 @@
 
         $secureId = strtoupper(bin2Hex(random_bytes(32)));
         $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
-        $rutaArchivoAGuardar = '../../imagenes'.$secureId.$_POST['imagen']['type'];
+        $rutaArchivoAGuardar = 'DIR_UPLOADS'.$secureId.$_POST['imagen']['type'];
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
