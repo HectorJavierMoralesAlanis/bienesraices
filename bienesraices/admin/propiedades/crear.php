@@ -18,7 +18,7 @@
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
-            "imagen" => $rutaArchivoTemp,
+            "imagen" => $rutaArchivoAGuardar,
             "descripcion" => $_POST['descripcion'],
             "habitaciones" => $_POST['habitaciones'],
             "wc" => $_POST['wc'],
