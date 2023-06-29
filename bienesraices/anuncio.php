@@ -4,7 +4,7 @@
     echo $id;
     
     $dao=new dao();
-    
+    echo $dao;
     $consulta="SELECT * FROM Propiedades";
     
     $parametros=array("id"=>$id);
