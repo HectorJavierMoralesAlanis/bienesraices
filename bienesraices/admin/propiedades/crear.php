@@ -5,7 +5,6 @@
     $consulta2 = "SELECT * FROM vendedores";
     $user_access = $dao2->ejecutarConsulta($consulta2);
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
-        
         //Crear carpeta
         $nombreImagen = md5(uniqid(rand(),true));
         move_uploaded_file($imagen['tmp_name'],'../../imagenes'.'/archivo.jpg');
@@ -25,7 +24,7 @@
             "fecha" => $fecha,
             "id_vendedores" => $_POST['vendedor'],
         );
-        
+
         $resultados = $dao->insertarConsulta($consulta, $parametros);
 
         if ($resultados >= 0) {
