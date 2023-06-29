@@ -9,7 +9,7 @@
     $vendedores=$dao2->ejecutarConsulta($consulta2);
     require 'includes/funciones.php';
     incluirTemplates('header');
-    foreach($propieadades as $propiedad){
+    foreach($propiedades as $propiedad){
         echo $propiedad['imagen'];
     }
 ?>
