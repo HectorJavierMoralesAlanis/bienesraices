@@ -8,8 +8,8 @@
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
 
         $secureId = strtoupper(bin2Hex(random_bytes(32)));
-        $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
-        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId;
+        $rutaArchivoTemp = $_FILES['imagen']['name'];
+        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.$extencion;
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
         
