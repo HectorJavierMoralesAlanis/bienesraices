@@ -6,7 +6,7 @@
     //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
     $dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
-    $consulta = "SELECT * FROM Propiedades WHERE imagen =: imagen";
+    $consulta = "SELECT * FROM Propiedades WHERE id =: imagen";
     $parametros = array("imagen"=>$secureId);
     $r= $dao->ejecutarConsulta($consulta,$parametros);
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
@@ -15,7 +15,7 @@
     // Ruta completa de donde se guardó  el archivo. El archivo debió guardarse en
     // el directorio de archivos subidos, además que debió guardarse con el nombre
     // de archivo que es el secureId
-    $rutaArchivo = DIR_UPLOADS . $secureId;
+    $rutaArchivo = DIR_UPLOADS . $r['imagen'];
 
     // Se obtiene el tamaño del archivo en bytes.
     $tamaño = filesize($rutaArchivo);
