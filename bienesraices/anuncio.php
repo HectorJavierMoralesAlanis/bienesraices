@@ -3,11 +3,11 @@
     $id=$_GET['id'];
 
     $dao=new DAO();
-    $consulta="SELECT * FROM Propiedades";
+    $consulta="SELECT * FROM Propiedades WHERE id=:id";
     
     $parametros=array("id"=>$id);
     
-    //$propiedad=$dao->ejecutarConsulta($consulta,$parametros);
+    $propiedad=$dao->ejecutarConsulta($consulta,$parametros);
     echo $propiedad;
     require 'includes/funciones.php';
     incluirTemplates('header');
