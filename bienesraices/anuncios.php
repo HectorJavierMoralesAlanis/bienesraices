@@ -9,6 +9,9 @@
     $vendedores=$dao2->ejecutarConsulta($consulta2);
     require 'includes/funciones.php';
     incluirTemplates('header');
+    foreach($propieadades as $propiedad){
+        echo $propiedad['imagen'];
+    }
 ?>
 
     <main class="contenedor seccion">
@@ -17,7 +20,7 @@
             <?php foreach($propiedades as $propiedad){?>
             <div class="anuncio">
                 <picture>
-                    <source srcset="build/img/anuncio1.webp" type="image/webp">
+                    <source srcset=<?php echo $propiedad['imagen']?> type="image/webp">
                     <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
                     <img loading="lazy" src="<?php echo $propiedad['imagen']?>" alt="anuncio">
                 </picture>
