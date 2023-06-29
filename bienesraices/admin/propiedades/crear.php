@@ -26,7 +26,7 @@
             "estacionamiento" => $_POST['estacionamiento'],
             "fecha" => $fecha,
             "id_vendedores" => $_POST['vendedor'],
-            "nombre_archivo" => $_FILES['imagen']['tmp_name'] 
+            "nombre_archivo" => $_FILES['imagen']['name'] 
         );
 
         $resultados = $dao->insertarConsulta($consulta, $parametros);
