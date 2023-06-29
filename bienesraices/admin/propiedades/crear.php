@@ -25,7 +25,7 @@
             "fecha" => $fecha,
             "id_vendedores" => $_POST['vendedor'],
         );
-
+        
         $resultados = $dao->insertarConsulta($consulta, $parametros);
 
         if ($resultados >= 0) {
