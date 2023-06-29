@@ -9,9 +9,10 @@
 
         $secureId = strtoupper(bin2Hex(random_bytes(32)));
         $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
-        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.'.jpg';
+        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.$extencion;
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
+        
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id, nombre_archivo) " .
             "VALUES (:titulo, :precio, :imagen, :descripcion, :habitaciones, :wc, :estacionamiento, :fecha, :id_vendedores, :nombre_archivo )";
