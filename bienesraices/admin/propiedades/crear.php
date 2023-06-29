@@ -1,9 +1,5 @@
 <?php
     // Base de datos
-    $carpetaImagenes= '../../imagenes';
-    if(!is_dir($carpetaImagenes)){
-        mkdir($carpetaImagenes);
-    }
     include ('./../../aux2.php');
     $dao2 = new DAO();
     $consulta2 = "SELECT * FROM vendedores";
