@@ -5,7 +5,7 @@
     
     $dao=new dao();
     
-    $consulta="SELECT * FROM Propiedades ". "WHERE id =: id";
+    $consulta="SELECT * FROM Propiedades";
     
     $parametros=array("id"=>$id);
     
