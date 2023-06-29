@@ -2,8 +2,9 @@
     include('aux2.php');
     $id=$_GET['id'];
     echo $id;
-    /*
+    
     $dao=new dao();
+    /*
     $consulta="SELECT * FROM Propiedades WHERE id =: id";
     $parametros=array("id"=>$id);
     $propiedades=$dao->ejecutarConsulta($consulta,$parametros);*/
