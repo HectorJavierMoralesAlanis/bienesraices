@@ -4,8 +4,9 @@
     echo $id;
     
     $dao=new dao();
-    /*
+    
     $consulta="SELECT * FROM Propiedades WHERE id =: id";
+    /*
     $parametros=array("id"=>$id);
     $propiedades=$dao->ejecutarConsulta($consulta,$parametros);*/
     require 'includes/funciones.php';
