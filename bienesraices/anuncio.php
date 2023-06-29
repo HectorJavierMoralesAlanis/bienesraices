@@ -1,15 +1,13 @@
 <?php
     include ('aux2.php');
     $id=$_GET['id'];
-    echo $id;
-    
-    $dao=new dao();
-    echo $dao;
+
+    $dao=new DAO();
     $consulta="SELECT * FROM Propiedades";
     
     $parametros=array("id"=>$id);
     
-    //$propiedad=$dao->ejecutarConsulta($consulta,$parametros);
+    $propiedad=$dao->ejecutarConsulta($consulta,$parametros);
     echo $propiedad;
     require 'includes/funciones.php';
     incluirTemplates('header');
