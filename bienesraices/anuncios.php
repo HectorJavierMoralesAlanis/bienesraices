@@ -19,11 +19,10 @@
         <div class="contenedor-anuncios">
             <?php foreach($propiedades as $propiedad):?>
             <div class="anuncio">
-
                 <picture>
                     <source srcset=<?php echo $propiedad['imagen']?> type="image/webp">
                     <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
-                    <img loading="lazy" src="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/jpeg" alt="anuncio">                    
+                    <img loading="lazy" src="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="anuncio">                    
                 </picture>
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
