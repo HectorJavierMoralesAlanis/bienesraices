@@ -1,5 +1,5 @@
 <?php
-    echo 'dao';
+
     class DAO{
         //Se crea la variable conexion
         private $conexion;
