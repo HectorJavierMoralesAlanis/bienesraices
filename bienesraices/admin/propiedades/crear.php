@@ -4,6 +4,7 @@
     $dao2 = new DAO();
     $consulta2 = "SELECT * FROM vendedores";
     $user_access = $dao2->ejecutarConsulta($consulta2);
+    var_dump($_FILES);
     /*
     if (isset($_POST['titulo'], $_POST['precio'], $_POST['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
         $dao = new DAO();
@@ -41,7 +42,7 @@
 
         <a href="/bienesraices/admin/index.php" class="boton boton-verde">Volver</a>
 
-        <form class="formulario" method="POST" action="/../bienesraices/admin/propiedades/crear.php" enctype="multipart/fomr-data">
+        <form class="formulario" method="POST" action="/../bienesraices/admin/propiedades/crear.php" enctype="multipart/form-data">
             <fieldset>
                 <legend>Información General</legend>
 
