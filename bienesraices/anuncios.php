@@ -20,8 +20,8 @@
             <?php foreach($propiedades as $propiedad):?>
             <div class="anuncio">
                 <picture>
-                    <source srcset="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/webp">
-                    <source srcset="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/jpeg">
+                    <source srcset="<?php echo APP_PATH ?>retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/webp">
+                    <source srcset="<?php echo APP_PATH ?>retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/jpeg">
                     <img loading="lazy" src="<?php echo APP_PATH ?>retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="anuncio">
                 </picture>
                 <div class="contenido-anuncio">
