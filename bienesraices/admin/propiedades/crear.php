@@ -11,7 +11,7 @@
 
         $parametros=array("titulo"=>"$_POST[titulo]",
                         "precio"=>"$_POST[precio]",
-                        "imagen"=>"$_POST[imagen]",
+                        "imagen"=>addslashes(file_get_contents($_FILES['imagen']['tmp_name'])),
                         "descripcion"=>"$_POST[descripcion]",
                         "habitaciones"=>"$_POST[habitaciones]",
                         "wc"=>"$_POST[wc]",
@@ -36,7 +36,7 @@
 
         <a href="/bienesraices/admin/index.php" class="boton boton-verde">Volver</a>
 
-        <form class="formulario" method="POST" action="/../bienesraices/admin/propiedades/crear.php">
+        <form class="formulario" method="POST" action="/../bienesraices/admin/propiedades/crear.php" ecntype="multipart/fomr-data">
             <fieldset>
                 <legend>Información General</legend>
 
