@@ -12,6 +12,7 @@
         $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.$_POST['imagen']['type'];
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
+        
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
             "VALUES (:titulo, :precio, :imagen, :descripcion, :habitaciones, :wc, :estacionamiento, :fecha, :id_vendedores)";
