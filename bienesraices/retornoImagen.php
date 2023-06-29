@@ -11,10 +11,6 @@
     $r= $dao->ejecutarConsulta($consulta,$parametros);  // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
-    if (!$r) {  // Si no se regresó ningun registro de la consulta por el secure_id.
-        http_response_code(404);  // Regresamos error 404 = Not Found, no existe el archivo.
-        exit;  // Fin de la ejecución.
-    }
 
     // Ruta completa de donde se guardó el archivo. El archivo debió guardarse en
     // el directorio de archivos subidos, además que debió guardarse con el nombre
