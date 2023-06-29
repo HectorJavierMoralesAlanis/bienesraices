@@ -19,6 +19,7 @@
         <div class="contenedor-anuncios">
             <?php foreach($propiedades as $propiedad):?>
             <div class="anuncio">
+                
                 <picture>
                     <source srcset=<?php echo $propiedad['imagen']?> type="image/webp">
                     <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
