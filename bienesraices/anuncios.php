@@ -1,6 +1,6 @@
 <?php
      //Base de datos
-    //include ('retornoImagen.php');
+    define("APP_PATH","/var/www/html/bienesraices/");
     include ('aux2.php');
     $dao1=new DAO();
     $consulta1="SELECT * FROM Propiedades";
@@ -22,7 +22,7 @@
                 <picture>
                     <source srcset="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/webp">
                     <source srcset="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>" type="image/jpeg">
-                    <img loading="lazy" src="retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="anuncio">                    
+                    <img loading="lazy" src="<?php echo APP_PATH ?>retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="anuncio">
                 </picture>
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
@@ -37,7 +37,7 @@
                             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
                             <p><?php echo $propiedad['estacionamiento']?></p>
                         </li>
-                        <li>
+                        <li>    
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
                             <p><?php echo $propiedad['habitaciones']?></p>
                         </li>
