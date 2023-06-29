@@ -17,16 +17,6 @@
     // de archivo que es el secureId
     $rutaArchivo = DIR_UPLOADS . $secureId;
 
-    if (!file_exists($rutaArchivo)) {  // si no existe el archivo.
-
-        // Regresamos error 500 = Internal Server Error. Esto porque no
-        // debería de pasar... si no se guardó el archivo en la carpeta,
-        // algo salió mal en el proceso de guardado del archivo.
-        http_response_code(500);  
-        echo "NO SE ENCONTRÓ EL ARCHIVO EN DIR :(";
-        exit;  // Fin de la ejecución.
-    }
-
     // Se obtiene el tamaño del archivo en bytes.
     $tamaño = filesize($rutaArchivo);
 
