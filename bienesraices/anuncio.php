@@ -1,5 +1,5 @@
 <?php
-    include('aux2.php');
+    include ('aux2.php');
     $id=$_GET['id'];
     echo $id;
     
