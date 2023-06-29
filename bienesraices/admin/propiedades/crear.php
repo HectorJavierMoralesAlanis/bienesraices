@@ -9,8 +9,7 @@
         echo "oasd";
         //Crear carpeta
         $nombreImagen = md5(uniqid(rand(),true));
-        move_uploaded_file($_FILES['tmp_name'],'../../imagenes'.'/archivo.jpg');
-        exit;
+        move_uploaded_file($_FILES['imagen']['tmp_name'],'../../imagenes'.'/archivo.jpg');
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
