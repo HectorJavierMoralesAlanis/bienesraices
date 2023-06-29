@@ -19,7 +19,7 @@
             <?php foreach($propiedades as $propiedad):?>
             <div class="anuncio">
                 <picture>
-                    <img loading="lazy" src="retornoImagen.php?s_id=<?php echo $propiedad["id"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
+                    <img loading="lazy" src="bienesraices/retornoImagen.php?s_id=<?php echo $propiedad["id"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
                 </picture>
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
