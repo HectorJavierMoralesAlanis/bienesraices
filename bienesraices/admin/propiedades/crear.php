@@ -5,10 +5,11 @@
     $consulta2 = "SELECT * FROM vendedores";
     $user_access = $dao2->ejecutarConsulta($consulta2);
     if (isset($_POST['titulo'], $_POST['precio'], $_FILES['imagen'], $_POST['descripcion'], $_POST['habitaciones'], $_POST['wc'], $_POST['estacionamiento'], $_POST['vendedor'])) {
-        echo "oasd";
-        //Crear carpeta
-        $nombreImagen = md5(uniqid(rand(),true));
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'imagenes'.'/archivo.jpg');
+
+        $secureId = strtoupper(bin2Hex(random_bytes(32)));
+        $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
+        $rutaArchivoAGuardar = '../../imagenes'.$secureId.$_POST['imagen']['type'];
+        move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
         $fecha = date('Y-m-d H:i:s');
         $consulta = "INSERT INTO Propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) " .
@@ -16,7 +17,7 @@
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
-            "imagen" => $_FILES['imagen'],
+            "imagen" => $secureId.$_FILES['imagen']['type'],
             "descripcion" => $_POST['descripcion'],
             "habitaciones" => $_POST['habitaciones'],
             "wc" => $_POST['wc'],
