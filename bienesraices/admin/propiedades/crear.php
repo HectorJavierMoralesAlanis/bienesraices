@@ -9,7 +9,7 @@
 
         $secureId = strtoupper(bin2Hex(random_bytes(32)));
         $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
-        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.$extencion;
+        $rutaArchivoAGuardar = DIR_UPLOADS.$secureId;
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
         
