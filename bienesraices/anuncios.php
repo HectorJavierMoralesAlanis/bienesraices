@@ -1,5 +1,6 @@
 <?php
      //Base de datos
+    include ('retornoImagen.php');
     include ('aux2.php');
     $dao1=new DAO();
     $consulta1="SELECT * FROM Propiedades";
@@ -7,21 +8,6 @@
     $dao2=new DAO();
     $consulta2="SELECT * FROM vendedores";
     $vendedores=$dao2->ejecutarConsulta($consulta2);
-
-    // Obtenemos la extensión del archivo, esto para determinar el tipo de
-    // archivo que vamos a regresar.
-    $extension = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
-
-    // Determinamos el content-type a partir de la extensión del archivo.
-    // El content-type le dice al client (el web browser) qué tipo de archivo
-    // es y como tratar este archivo. Por ejemplo, si es un image/jpeg el web
-    // browser puede desplegar este tipo de archivo, puesto que es una imagen;
-    // si es un application/pdf, el web brower lo desplegara con su complemento
-    // para ver archivos PDF.
-    $contentType = 
-            array_key_exists($extension, $CONTENT_TYPES_EXT) ? 
-            $CONTENT_TYPES_EXT[$extension] : $CONTENT_TYPES_EXT["bin"];
-
 
     require 'includes/funciones.php';
     incluirTemplates('header');
@@ -31,13 +17,12 @@
     <main class="contenedor seccion">
         <h2>Casas y Depas en Venta</h2>
         <div class="contenedor-anuncios">
-            <?php foreach($propiedades as $propiedad){?>
+            <?php foreach($propiedades as $propiedad):?>
             <div class="anuncio">
                 <picture>
                     <source srcset=<?php echo $propiedad['imagen']?> type="image/webp">
                     <source srcset="<?php echo $propiedad['imagen']?>"  type="image/jpeg">
-                    <img loading="lazy" src="<?php echo $propiedad['imagen']?>" alt="anuncio">
-                </picture>
+                    <img loading="lazy" src="<?php echo 'retornoImagen.php?s_id=' . $propiedad['imagen']; ?>" alt="anuncio">
                 <div class="contenido-anuncio">
                     <h3><?php echo $propiedad['titulo']?></h3>
                     <p><?php echo $propiedad['descripcion']?></p>
@@ -61,7 +46,7 @@
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
-            <?php }?>
+            <?php endforeach;?>
 
         </div> <!--.contenedor-anuncios-->
     </main>

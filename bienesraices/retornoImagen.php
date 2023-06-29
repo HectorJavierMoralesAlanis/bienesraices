@@ -1,5 +1,6 @@
 <?php 
     include ('aux2.php');
+    $secureId = filter_input(INPUT_GET, "s_id");
     // Consultamos el registro del archivo/foto subido en la base de datos.
     $sqlCmd = "SELECT * FROM fotos WHERE secure_id = ?";  // SQL query.
     $params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
