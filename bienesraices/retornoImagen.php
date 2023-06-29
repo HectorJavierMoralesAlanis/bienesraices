@@ -9,7 +9,8 @@
     $consulta = "SELECT * FROM Propiedades WHERE imagen =: imagen";
     $parametros = array("imagen"=>$secureId);
     $r= $db->ejecutarConsulta($consulta,$parametros);
-    echo $r;  // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
+    echo $r;
+      // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
     if (!$r) {  // Si no se regresó ningun registro de la consulta por el secure_id.
