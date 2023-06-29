@@ -9,7 +9,6 @@
 
         $secureId = strtoupper(bin2Hex(random_bytes(32)));
         $rutaArchivoTemp = $_FILES['imagen']['tmp_name'];
-        $extencion=$_FILES['imagen']['type'];
         $rutaArchivoAGuardar = DIR_UPLOADS.$secureId.$extencion;
         move_uploaded_file($rutaArchivoTemp,$rutaArchivoAGuardar);
         $dao = new DAO();
@@ -20,7 +19,7 @@
         $parametros = array(
             "titulo" => $_POST['titulo'],
             "precio" => $_POST['precio'],
-            "imagen" => $secureId.$extencion,
+            "imagen" => $secureId,
             "descripcion" => $_POST['descripcion'],
             "habitaciones" => $_POST['habitaciones'],
             "wc" => $_POST['wc'],
