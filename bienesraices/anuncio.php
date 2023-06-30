@@ -8,7 +8,6 @@
     $parametros=array("id"=>$id);
     
     $propiedades=$dao->ejecutarConsulta($consulta,$parametros);
-    echo $propiedad;
     require 'includes/funciones.php';
     incluirTemplates('header');
 ?>
