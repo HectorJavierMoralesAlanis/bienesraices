@@ -1,12 +1,20 @@
 <?php 
     include ('aux2.php');
     define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
+
+$CONTENT_TYPES_EXT = array(
+    "jpg" => "image/jpeg",
+    "jpeg" => "image/jpeg",
+    "png" => "image/png",
+    // Otras extensiones y tipos de contenido...
+);
+    //testea con "s_id" y "id"
     $secureId = filter_input(INPUT_GET, "s_id");
     // Consultamos el registro del archivo/foto subido en la base de datos.
     //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
     $dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
-    $consulta = "SELECT * FROM Propiedades WHERE id =: id";
+    $consulta = "SELECT * FROM Propiedades WHERE id =:id";
     $parametros = array("id"=>$secureId);
     $r= $dao->ejecutarConsulta($consulta,$parametros);
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
