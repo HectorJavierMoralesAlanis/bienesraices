@@ -14,7 +14,6 @@
                 echo $ex->getMessage();
             }
         }
-
         //Funcion para ejecutar la consultas SELECT 
         public function ejecutarConsulta($sql="",$valores=array()){
             if($sql!=""&&strlen($sql)>0){
