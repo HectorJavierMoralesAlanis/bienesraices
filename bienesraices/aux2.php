@@ -8,7 +8,7 @@
             //try and cath
             try{
                 //Se guardara la conexion a la base de datos
-                $this->conexion = new PDO("mysql:host=localhost;dbname=bienesraices","admin","4e06114ca3f18de4cf658458aa2533934e24981e778cce25");
+                $this->conexion = new PDO("mysql:host=localhost;dbname=bienesraices","NuevoU","Unuevo1234");
             }catch (Exception $ex){
                 //Mensajen de error
                 echo $ex->getMessage();
