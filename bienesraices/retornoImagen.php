@@ -42,14 +42,44 @@
     $stmt = $db->prepare($consulta);  // Preparamos la consulta a ejecutar.
     $stmt->execute($parametros);  // Ejecutamos la consulta.
     $r = $stmt->fetch();   // Obtenemos el primer registro de la consulta.
+    $row = $r->fetch();
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
+    if ($row) {
+        $rutaArchivo = DIR_UPLOADS . $row['imagen'];
+    
+        if (file_exists($rutaArchivo)) {
+            $tamaño = filesize($rutaArchivo);
+            $nombreArchivo = $row["nombre_archivo"];
+            $extension = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
+            $contentType = isset($CONTENT_TYPES_EXT[$extension]) ? $CONTENT_TYPES_EXT[$extension] : $CONTENT_TYPES_EXT["bin"];
+    
+            header("Content-Type: $contentType");
+            header("Content-Disposition: inline; filename=\"$nombreArchivo\"");
+            header("Content-Length: $tamaño");
+    
+            echo file_get_contents($rutaArchivo);
+        } else {
+            echo "El archivo no existe.";
+        }
+    } else {
+        echo "No se encontró ningún registro con el ID proporcionado.";
+    }
     // Ruta completa de donde se guardó  el archivo. El archivo debió guardarse en
     // el directorio de archivos subidos, además que debió guardarse con el nombre
     // de archivo que es el secureId
     $rutaArchivo = DIR_UPLOADS . $r['imagen'];
-
+    
+    if (!file_exists($rutaArchivo)) {  // si no existe el archivo.
+    
+        // Regresamos error 500 = Internal Server Error. Esto porque no
+        // debería de pasar... si no se guardó el archivo en la carpeta,
+        // algo salió mal en el proceso de guardado del archivo.
+        http_response_code(500);  
+        echo "NO SE ENCONTRÓ EL ARCHIVO EN DIR :(";
+        exit;  // Fin de la ejecución.
+    }
     // Se obtiene el tamaño del archivo en bytes.
     $tamaño = filesize($rutaArchivo);
 
