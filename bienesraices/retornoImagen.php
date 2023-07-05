@@ -59,7 +59,7 @@ $CONTENT_TYPES_EXT = array(
     header("Content-Length: $tamaño");
 
     // Enviamos el archivo como respuesta.
-    //readfile($rutaArchivo);
-    echo file_get_contents($rutaArchivo);  // Otra forma de regresar archivo como respuesta.
+    readfile($rutaArchivo);
+    //echo file_get_contents($rutaArchivo);  // Otra forma de regresar archivo como respuesta.
 
 ?>
