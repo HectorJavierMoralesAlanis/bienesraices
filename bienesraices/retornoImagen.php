@@ -1,5 +1,5 @@
 <?php 
-    include ('aux2.php');
+    include ('./aux2.php');
     define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
 
 $CONTENT_TYPES_EXT = array(
