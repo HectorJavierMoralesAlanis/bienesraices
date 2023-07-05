@@ -1,5 +1,5 @@
 <?php
-
+    define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
         /**
      * Regresa una instancia de PDO para poder trabajar con la base de datos.
      */
@@ -23,7 +23,7 @@
         http_response_code(400);  // Regresamos error 400 = Bad Request.
         exit;  // Fin de la ejecución.
     }
-
+    
     // Consultamos el registro del archivo/foto subido en la base de datos.
     $sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     $params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
