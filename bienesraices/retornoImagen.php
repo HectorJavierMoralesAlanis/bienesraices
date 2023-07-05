@@ -17,6 +17,10 @@ $CONTENT_TYPES_EXT = array(
     $consulta = "SELECT * FROM Propiedades WHERE id =:id";
     $parametros = array("id"=>$secureId);
     $r= $dao->ejecutarConsulta($consulta,$parametros);
+
+    if($r ===0){
+        return error_log(0);
+    }
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
