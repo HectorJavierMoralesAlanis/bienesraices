@@ -1,23 +1,47 @@
 <?php 
-    include ('./aux2.php');
+    
+    /**
+     * Regresa una instancia de PDO para poder trabajar con la base de datos.
+     */
+    function getDbConnection() {
+
+        // Opciones para la conexión a DB.
+        $options = [
+            PDO::ATTR_EMULATE_PREPARES   => false, //desactiva la emulación de sentencias preparadas
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //manejo de errores
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //modo de fetch por default
+        ];
+
+        // Creamos una instancia de tipo PDO, que es la que regresamos.
+        // Los parámetros de conexión a DB están definidos en el archivo config.php.
+        return new PDO("mysql:host=localhost;dbname=bienesraices","NuevoU","Unuevo1234");
+    }
+
     define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
 
-$CONTENT_TYPES_EXT = array(
-    "jpg" => "image/jpeg",
-    "jpeg" => "image/jpeg",
-    "png" => "image/png",
-    // Otras extensiones y tipos de contenido...
-);
+    $CONTENT_TYPES_EXT = array(
+        "jpg" => "image/jpeg",
+        "jpeg" => "image/jpeg",
+        "png" => "image/png",
+        // Otras extensiones y tipos de contenido...
+    );
     //testea con "s_id" y "id"
     $secureId = filter_input(INPUT_GET, "s_id");
     // Consultamos el registro del archivo/foto subido en la base de datos.
     //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
     //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
-    $dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
+    //$dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
     $consulta = "SELECT * FROM Propiedades WHERE id =:id";
     $parametros = array("id"=>$secureId);
-    $r= $dao->ejecutarConsulta($consulta,$parametros);
+   // $r = $dao->ejecutarConsulta($consulta, $parametros);
 
+    // Consultamos el registro del archivo/foto subido en la base de datos.
+    //$sqlCmd = "SELECT * FROM fotos WHERE secure_id = ?";  // SQL query.
+    //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
+    $db = getDbConnection();  // Objeto PDO para hacer la interaccion con la DB.
+    $stmt = $db->prepare($consulta);  // Preparamos la consulta a ejecutar.
+    $stmt->execute($parametros);  // Ejecutamos la consulta.
+    $r = $stmt->fetch();   // Obtenemos el primer registro de la consulta.
       // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
       // Obtenemos el primer registro de la consulta.
 
