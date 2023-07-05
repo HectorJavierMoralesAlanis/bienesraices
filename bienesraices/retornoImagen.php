@@ -1,6 +1,6 @@
-<?php 
-    
-    /**
+<?php
+
+        /**
      * Regresa una instancia de PDO para poder trabajar con la base de datos.
      */
     function getDbConnection() {
@@ -17,62 +17,33 @@
         return new PDO("mysql:host=localhost;dbname=bienesraices","NuevoU","Unuevo1234");
     }
 
-    define("DIR_UPLOADS","/var/www/html/bienesraices/imagenes/");
-
-    $CONTENT_TYPES_EXT = array(
-        "jpg" => "image/jpeg",
-        "jpeg" => "image/jpeg",
-        "png" => "image/png",
-        // Otras extensiones y tipos de contenido...
-    );
-    //testea con "s_id" y "id"
+    // Se obtiene el parámetro del secure id, enviado por el URL.
     $secureId = filter_input(INPUT_GET, "s_id");
-    // Consultamos el registro del archivo/foto subido en la base de datos.
-    //$sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
-    //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
-    //$dao = new DAO();  // Objeto PDO para hacer la interaccion con la DB.
-    $consulta = "SELECT * FROM Propiedades WHERE id =:id";
-    $parametros = array("id"=>$secureId);
-   // $r = $dao->ejecutarConsulta($consulta, $parametros);
-
-    // Consultamos el registro del archivo/foto subido en la base de datos.
-    //$sqlCmd = "SELECT * FROM fotos WHERE secure_id = ?";  // SQL query.
-    //$params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
-    $db = getDbConnection();  // Objeto PDO para hacer la interaccion con la DB.
-    $stmt = $db->prepare($consulta);  // Preparamos la consulta a ejecutar.
-    $stmt->execute($parametros);  // Ejecutamos la consulta.
-    $r = $stmt->fetch();   // Obtenemos el primer registro de la consulta.
-    $row = $r->fetch();
-      // Preparamos la consulta a ejecutar. y Ejecutamos la consulta.
-      // Obtenemos el primer registro de la consulta.
-
-    if ($row) {
-        $rutaArchivo = DIR_UPLOADS . $row['imagen'];
-    
-        if (file_exists($rutaArchivo)) {
-            $tamaño = filesize($rutaArchivo);
-            $nombreArchivo = $row["nombre_archivo"];
-            $extension = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
-            $contentType = isset($CONTENT_TYPES_EXT[$extension]) ? $CONTENT_TYPES_EXT[$extension] : $CONTENT_TYPES_EXT["bin"];
-    
-            header("Content-Type: $contentType");
-            header("Content-Disposition: inline; filename=\"$nombreArchivo\"");
-            header("Content-Length: $tamaño");
-    
-            echo file_get_contents($rutaArchivo);
-        } else {
-            echo "El archivo no existe.";
-        }
-    } else {
-        echo "No se encontró ningún registro con el ID proporcionado.";
+    if (!$secureId) {   // Si no existe el parámetro.
+        http_response_code(400);  // Regresamos error 400 = Bad Request.
+        exit;  // Fin de la ejecución.
     }
-    // Ruta completa de donde se guardó  el archivo. El archivo debió guardarse en
+
+    // Consultamos el registro del archivo/foto subido en la base de datos.
+    $sqlCmd = "SELECT * FROM Propiedades WHERE imagen = ?";  // SQL query.
+    $params = [$secureId];  // Los parámetros de la consulta, en este caso el secure_id.
+    $db = getDbConnection();  // Objeto PDO para hacer la interaccion con la DB.
+    $stmt = $db->prepare($sqlCmd);  // Preparamos la consulta a ejecutar.
+    $stmt->execute($params);  // Ejecutamos la consulta.
+    $r = $stmt->fetch();   // Obtenemos el primer registro de la consulta.
+
+    if (!$r) {  // Si no se regresó ningun registro de la consulta por el secure_id.
+        http_response_code(404);  // Regresamos error 404 = Not Found, no existe el archivo.
+        exit;  // Fin de la ejecución.
+    }
+
+    // Ruta completa de donde se guardó el archivo. El archivo debió guardarse en
     // el directorio de archivos subidos, además que debió guardarse con el nombre
     // de archivo que es el secureId
-    $rutaArchivo = DIR_UPLOADS . $r['imagen'];
-    
+    $rutaArchivo = DIR_UPLOADS . $secureId;
+
     if (!file_exists($rutaArchivo)) {  // si no existe el archivo.
-    
+        
         // Regresamos error 500 = Internal Server Error. Esto porque no
         // debería de pasar... si no se guardó el archivo en la carpeta,
         // algo salió mal en el proceso de guardado del archivo.
@@ -80,6 +51,7 @@
         echo "NO SE ENCONTRÓ EL ARCHIVO EN DIR :(";
         exit;  // Fin de la ejecución.
     }
+
     // Se obtiene el tamaño del archivo en bytes.
     $tamaño = filesize($rutaArchivo);
 
