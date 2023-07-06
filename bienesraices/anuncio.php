@@ -25,7 +25,7 @@
                 <p class="precio">$<?php echo $propiedad['precio']?></p>
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
+                        <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
                         <p><?php echo $propiedad['wc']?></p>
                     </li>
                     <li>
