@@ -17,6 +17,16 @@
         return new PDO("mysql:host=localhost;dbname=bienesraices","NuevoU","Unuevo1234");
     }
 
+    // Extensiones de archivos con su correspondiente content-type.
+    $CONTENT_TYPES_EXT = [
+        "jpg" => "image/jpeg",
+        "jpeg" => "image/jpeg",
+        "gif" => "image/gif",
+        "png" => "image/png",
+        "json" => "application/json",
+        "pdf" => "application/pdf",
+        "bin" => "application/octet-stream"
+    ];
     // Se obtiene el parámetro del secure id, enviado por el URL.
     $secureId = filter_input(INPUT_GET, "s_id");
     if (!$secureId) {   // Si no existe el parámetro.
