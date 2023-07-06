@@ -19,13 +19,13 @@
             <picture>
                 <source srcset="build/img/destacada.webp" type="image/webp">
                 <source srcset="build/img/destacada.jpg" type="image/jpeg">
-                <img loading="lazy" src="build/img/destacada.jpg" alt="imagen de la propiedad">
+                <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
             </picture>
             <div class="resumen-propiedad">
                 <p class="precio">$<?php echo $propiedad['precio']?></p>
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
+                        <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
                         <p><?php echo $propiedad['wc']?></p>
                     </li>
                     <li>
