@@ -18,8 +18,6 @@
 
             <picture>
                 <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
-                <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
-                <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
             </picture>
             <div class="resumen-propiedad">
                 <p class="precio">$<?php echo $propiedad['precio']?></p>
