@@ -17,8 +17,8 @@
             <h1><?php echo $propiedad['titulo']?></h1>
 
             <picture>
-                <source srcset="build/img/destacada.webp" type="image/webp">
-                <source srcset="build/img/destacada.jpg" type="image/jpeg">
+                <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
+                <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
                 <img loading="lazy" src="./retornoImagen.php?s_id=<?php echo $propiedad["imagen"]?>"  alt="<?php echo $propiedad["nombre_archivo"] ?>" title="<?php echo $propiedad["nombre_archivo"] ?>">                
             </picture>
             <div class="resumen-propiedad">
