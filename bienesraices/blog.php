@@ -9,9 +9,9 @@
         <article class="entrada-blog">
             <div class="imagen">
                 <picture>
-                    <source srcset="build/img/destacada1.webp" type="image/webp">
-                    <source srcset="build/img/destacada.jpg" type="image/jpeg">
-                    <img loading="lazy" src="build/img/destacada.jpg" alt="Texto Entrada Blog">
+                    <source srcset="build/img/blog1.webp" type="image/webp">
+                    <source srcset="build/img/blog1.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/blog1.jpg" alt="Texto Entrada Blog">
                 </picture>
             </div>
 

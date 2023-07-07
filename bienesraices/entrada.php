@@ -8,9 +8,9 @@
 
    
         <picture>
-            <source srcset="build/img/destacada1.webp" type="image/webp">
-            <source srcset="build/img/destacada1.jpg" type="image/jpeg">
-            <img loading="lazy" src="build/img/destacada1.jpg" alt="imagen de la propiedad">
+            <source srcset="build/img/blog1.webp" type="image/webp">
+            <source srcset="build/img/blog1.jpg" type="image/jpeg">
+            <img loading="lazy" src="build/img/blog1.jpg" alt="imagen de la propiedad">
         </picture>
 
         <p class="informacion-meta">Escrito el: <span>20/10/2021</span> por: <span>Admin</span> </p>
