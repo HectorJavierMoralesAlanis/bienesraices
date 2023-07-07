@@ -20,9 +20,9 @@
                     25 Años de experiencia
                 </blockquote>
 
-                <p>Proin consequat viverra sapien, malesuada tempor tortor feugiat vitae. In dictum felis et nunc aliquet molestie. Proin tristique commodo felis, sed auctor elit auctor pulvinar. Nunc porta, nibh quis convallis sollicitudin, arcu nisl semper mi, vitae sagittis lorem dolor non risus. Vivamus accumsan maximus est, eu mollis mi. Proin id nisl vel odio semper hendrerit. Nunc porta in justo finibus tempor. Suspendisse lobortis dolor quis elit suscipit molestie. Sed condimentum, erat at tempor finibus, urna nisi fermentum est, a dignissim nisi libero vel est. Donec et imperdiet augue. Curabitur malesuada sodales congue. Suspendisse potenti. Ut sit amet convallis nisi.</p>
+                <p>Nuestra empresa cuenta con una amplia experiencia en el mercado de bienes raíces, respaldada por años de trayectoria exitosa. Nos enorgullece haber asistido a numerosos clientes en la compra, venta y alquiler de propiedades, brindándoles un servicio personalizado y de calidad. Nuestro equipo de expertos posee un profundo conocimiento del mercado inmobiliario, lo que nos permite ofrecer asesoramiento confiable y estratégico a nuestros clientes.</p>
 
-                <p>Aliquam lectus magna, luctus vel gravida nec, iaculis ut augue. Praesent ac enim lorem. Quisque ac dignissim sem, non condimentum orci. Morbi a iaculis neque, ac euismod felis. Fusce augue quam, fermentum sed turpis nec, hendrerit dapibus ante. Cras mattis laoreet nibh, quis tincidunt odio fermentum vel. Nulla facilisi.</p>
+                <p>Con cada transacción, nos esforzamos por superar las expectativas, proporcionando una experiencia transparente, segura y satisfactoria. Confíe en nuestra experiencia y permítanos ayudarlo a alcanzar sus metas en el emocionante mundo de los bienes raíces.</p>
             </div>
         </div>
     </main>
@@ -34,17 +34,17 @@
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
                 <h3>Seguridad</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Contamos con profesionales altamente capacitados en medidas de seguridad, lo que nos permite ofrecer un entorno confiable y protegido para la compra, venta o alquiler de propiedades. </p>
             </div>
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Trabajamos en estrecha colaboración con nuestros clientes para comprender sus necesidades y presupuesto, y así proporcionar opciones que se ajusten a sus expectativas. Nos esforzamos por mantener una política de transparencia en nuestros precios, asegurando que cada cliente reciba una inversión inmobiliaria justa y rentable.</p>
             </div>
             <div class="icono">
                 <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
                 <h3>A Tiempo</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Como empresa dedicada al sector de bienes raíces, valoramos el tiempo de nuestros clientes y nos esforzamos por proporcionar una experiencia eficiente y ágil en cada etapa del proceso.</p>
             </div>
         </div>
     </section>

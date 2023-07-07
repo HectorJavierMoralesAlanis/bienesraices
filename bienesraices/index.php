@@ -10,23 +10,23 @@
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
                 <h3>Seguridad</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Contamos con profesionales altamente capacitados en medidas de seguridad, lo que nos permite ofrecer un entorno confiable y protegido para la compra, venta o alquiler de propiedades. </p>
             </div>
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Trabajamos en estrecha colaboración con nuestros clientes para comprender sus necesidades y presupuesto, y así proporcionar opciones que se ajusten a sus expectativas. Nos esforzamos por mantener una política de transparencia en nuestros precios, asegurando que cada cliente reciba una inversión inmobiliaria justa y rentable.</p>
             </div>
             <div class="icono">
                 <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
                 <h3>A Tiempo</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p>Como empresa dedicada al sector de bienes raíces, valoramos el tiempo de nuestros clientes y nos esforzamos por proporcionar una experiencia eficiente y ágil en cada etapa del proceso.</p>
             </div>
         </div>
     </main>
 
     <section class="seccion contenedor">
-        <h2>Casas y Depas en Venta</h2>
+        <h2>Casas y Departamentos en Venta</h2>
 
         <div class="contenedor-anuncios">
             <div class="anuncio">
