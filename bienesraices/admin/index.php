@@ -41,8 +41,8 @@
     */
         //Incluye un template
     //require '../includes/funciones.php';
-    incluirTemplates('header');
     //incluirTemplates('header');
+    incluirTemplates('header');
 ?>
 
     <main class="contenedor seccion">
