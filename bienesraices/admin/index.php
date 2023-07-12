@@ -1,6 +1,6 @@
 <?php
     //require '../includes/funciones.php';
-    require '../aux2.php';
+    include_once '../aux2.php';
         // //Importa la conexión
     //require '../includes/config/database.php';
     $db = new DAO();
