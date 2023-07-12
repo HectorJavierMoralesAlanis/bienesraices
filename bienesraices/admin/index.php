@@ -50,7 +50,24 @@
 
         
 
-        
+        <!--<a href=" /bienesraices/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>-->
+
+        <table class="propiedades">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+        <tbody> <!-- Mostrar  los Resultados -->
+            
+        </tbody>
+        </table>
+
 <?php
         //Cerrar la conexión
     //mysqli_close($);
