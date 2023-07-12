@@ -70,7 +70,7 @@
             </thead>
 
         <tbody> <!-- Mostrar  los Resultados -->
-            <?php while( $propiedad = mysqli_fetch_assoc($resultadoConsulta) ): ?>
+            <?php foreach($resultadoConsulta as $propiedad): ?>
             <tr>
                 <td><?php echo $propiedad['id']; ?></td>
                 <td><?php echo $propiedad['titulo']; ?></td>
@@ -85,7 +85,7 @@
                     <a href="<?php $_SERVER['SERVER_NAME'] ?>/bienesraices/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="boton-amarillo-block">Actualizar</a>
                 </td>
             </tr>
-            <?php endwhile; ?>
+            <?php endforeach ?>
         </tbody>
         </table>
 
