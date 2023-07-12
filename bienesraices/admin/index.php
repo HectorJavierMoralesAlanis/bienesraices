@@ -1,8 +1,8 @@
 <?php
-    require '../includes/funciones.php';
+    //require '../includes/funciones.php';
     require '../aux2.php';
         // //Importa la conexión
-    require '../includes/config/database.php';
+    //require '../includes/config/database.php';
     $db = new DAO();
     
         // //Escribir el Query
@@ -12,8 +12,8 @@
     //$resultadoConsulta = mysqli_query($db, $query);
     $resultadoConsulta =  $dao1->ejecutarConsulta($consulta);
         // //Muestra mensaje condicional
-    $resultado = $_GET['resultado'] ?? null;
-    
+    //$resultado = $_GET['resultado'] ?? null;
+    /*
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id = $_POST['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
@@ -38,7 +38,7 @@
             }
         }
     }
-    
+    */
         //Incluye un template
     require '../includes/funciones.php';
     incluirTemplates('header');
