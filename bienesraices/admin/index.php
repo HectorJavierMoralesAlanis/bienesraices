@@ -56,7 +56,7 @@
             <p class="alerta exito">Anuncio Eliminado correctamente</p>
         <?php endif; ?>
 
-        <a href="<?php $_SERVER['SERVER_NAME'] ?>/bienesraices/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
+        <!--<a href=" /bienesraices/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>-->
 
         <table class="propiedades">
             <thead>
