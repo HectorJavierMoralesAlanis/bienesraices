@@ -51,7 +51,7 @@
 
         <a href=" /bienesraices/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
 
-        <table class="propiedades">
+        <table class="">
             <thead>
                 <tr>
                     <th>ID</th>
