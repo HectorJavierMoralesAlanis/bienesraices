@@ -10,7 +10,7 @@
     
         // //Consultar la BD
     //$resultadoConsulta = mysqli_query($db, $query);
-    //$resultadoConsulta =  $dao1->ejecutarConsulta($consulta);
+    $resultadoConsulta =  $db->ejecutarConsulta($consulta);
         // //Muestra mensaje condicional
     //$resultado = $_GET['resultado'] ?? null;
     /*
