@@ -4,7 +4,7 @@
         // //Importa la conexión
     //require '../includes/config/database.php';
     $db = new DAO();
-    
+
         // //Escribir el Query
     $consulta = "SELECT * FROM Propiedades";
     
