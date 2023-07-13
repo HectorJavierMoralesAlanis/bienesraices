@@ -1,6 +1,6 @@
 <?php
     //require '../includes/funciones.php';
-    include_once '/bienesraices/aux2.php';
+    include_once '/var/www/html/bienesraices/aux2.php';
         // //Importa la conexión
     //require '../includes/config/database.php';
     $db = new DAO();
