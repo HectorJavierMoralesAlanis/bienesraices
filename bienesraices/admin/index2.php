@@ -72,9 +72,9 @@
                 <td>
                     <form method="POST" class="w-100">
                         <input type="hidden" name="id" value="<?php echo $propiedad['id']; ?>">
-
-                        <input type="submit" class="boton-rojo-block" value="Eliminar">
                     </form>
+                    <a type="submit" class="boton-rojo-block" value="Eliminar" href="../admin/propiedades/borrar.php?id=$propiedad['id']">Eliminar<a>
+                    
                     <a href="/../bienesraices/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="boton-amarillo-block">Actualizar</a>
                 </td>
             </tr>
