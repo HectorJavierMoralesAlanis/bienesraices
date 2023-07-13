@@ -6,7 +6,7 @@
     $db = new DAO();
     
         // //Escribir el Query
-    $consulta = "SELECT * FROM propiedades";
+    $consulta = "SELECT * FROM Propiedades";
     
         // //Consultar la BD
     //$resultadoConsulta = mysqli_query($db, $query);
