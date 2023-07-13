@@ -1,16 +1,16 @@
 <?php
     //require '../includes/funciones.php';
-    include_once '/var/www/html/bienesraices/aux2.php';
+    //include_once '../aux2.php';
         // //Importa la conexión
     //require '../includes/config/database.php';
-    $db = new DAO();
+    //$db = new DAO();
     
         // //Escribir el Query
-    $consulta = "SELECT * FROM Propiedades";
+    //$consulta = "SELECT * FROM propiedades";
     
         // //Consultar la BD
     //$resultadoConsulta = mysqli_query($db, $query);
-    $resultadoConsulta =  $dao1->ejecutarConsulta($consulta);
+    //$resultadoConsulta =  $dao1->ejecutarConsulta($consulta);
         // //Muestra mensaje condicional
     //$resultado = $_GET['resultado'] ?? null;
     /*
@@ -48,7 +48,6 @@
     <main class="contenedor seccion">
         <h1>Administrador de Bienes Raices</h1>
 
-        
 
         <!--<a href=" /bienesraices/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>-->
 
