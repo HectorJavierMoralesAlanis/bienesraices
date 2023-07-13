@@ -3,11 +3,11 @@ include_once("../../PDO/DAO.php");
 
 $id=$_GET['id'];
 $dao=new DAO();
-$consulta="SELECT * FROM Propiedad WHERE id=:id";
+$consulta="SELECT * FROM Propiedades WHERE id=:id";
 $parametros=array("id"=>$id);
 $usuarios=$dao->ejecutarConsulta($consulta,$parametros);
 $dao2=new DAO();
-$consulta2="DELETE FROM Propiedad WHERE id=:idU";
+$consulta2="DELETE FROM Propiedades WHERE id=:idU";
 $parametros2=array("idU"=>$id);
 
 $resultados=$dao2->insertarConsulta($consulta2,$parametros2);
