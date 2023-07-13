@@ -3,7 +3,7 @@
     include '../aux2.php';
         // //Importa la conexión
     //require '../includes/config/database.php';
-    //$db = new DAO();
+    $db = new DAO();
     
         // //Escribir el Query
     //$consulta = "SELECT * FROM propiedades";
