@@ -6,11 +6,11 @@
     text-transform: uppercase;
     margin: 1rem 0;
 
-    &.error {
+    &.error{
         background-color: $rojo;
     }
 
-    &.exito {
+    &.exito{
         background-color: $verde;
     }
 }
