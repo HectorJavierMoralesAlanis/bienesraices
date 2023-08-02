@@ -6,8 +6,8 @@
     @include boton($amarillo, block);
 }
 
-.boton-amarillo-block2 {
-    @include boton($amarillo, block);
+.boton-rojo {
+    @include boton($rojo, block);
 }
 
 .boton-verde {
