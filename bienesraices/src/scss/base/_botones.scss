@@ -12,7 +12,6 @@
 
 .boton-rojo-block{
     @include boton($rojo, inline-block);
-    width: 100%;
 }
 
 .boton-verde-block {
