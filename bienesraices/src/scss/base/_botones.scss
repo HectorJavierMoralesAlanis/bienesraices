@@ -7,7 +7,7 @@
 }
 
 .boton-rojo {
-    @include boton($grisOscuro, inline-block);
+    @include boton($rojo, inline-block);
 }
 
 .boton-verde {
