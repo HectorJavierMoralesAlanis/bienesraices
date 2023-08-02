@@ -1,5 +1,5 @@
 .boton-amarillo {
-    @include boton($verde, inline-block);
+    @include boton($amarillo, inline-block);
 }
 
 .boton-amarillo-block {
@@ -7,7 +7,7 @@
 }
 
 .boton-rojo {
-    @include boton($rojo, inline-block);
+    @include boton($grisOscuro, inline-block);
 }
 
 .boton-verde {
