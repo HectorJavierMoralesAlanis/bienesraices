@@ -73,7 +73,7 @@
                     <form method="POST" class="w-100">
                         <input type="hidden" name="id" value="<?php echo $propiedad['id']; ?>">
                     </form>
-                    <a type="submit" class="boton-rojo" value="Eliminar" href="../admin/propiedades/borrar.php?id=<?php echo $propiedad['id']?>">Eliminar<a>
+                    <a type="submit" class="boton-rojo-block" value="Eliminar" href="../admin/propiedades/borrar.php?id=<?php echo $propiedad['id']?>">Eliminar<a>
                     
                     <a href="/../bienesraices/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="boton-amarillo-block">Actualizar</a>
                 </td>
