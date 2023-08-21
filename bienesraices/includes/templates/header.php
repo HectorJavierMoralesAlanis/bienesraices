@@ -23,9 +23,9 @@
                     <img class="dark-mode-boton" src="/bienesraices/build/img/dark-mode.svg" alt="dark-mode">
                     <nav class="navegacion">
                         <a href="<?php $_SERVER['SERVER_NAME']?>nosotros.php">Nosotros</a>
-                        <a href="<?php $_SERVER['SERVER_NAME']?>anuncios.php">Anuncios</a>
-                        <a href="<?php $_SERVER['SERVER_NAME']?>blog.php">Blog</a>
-                        <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/admin/index2.php">Contacto</a>
+                        <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/anuncios.php">Anuncios</a>
+                        <a href="/bienesraices/blog.php">Blog</a>
+                        <a href="/bienesraices/admin/index2.php">Contacto</a>
                     </nav>
                 </div>
                 
