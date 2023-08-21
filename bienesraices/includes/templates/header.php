@@ -22,7 +22,7 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/bienesraices/build/img/dark-mode.svg" alt="dark-mode">
                     <nav class="navegacion">
-                        <a href="<?php $_SERVER['SERVER_NAME']?>nosotros.php">Nosotros</a>
+                        <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/nosotros.php">Nosotros</a>
                         <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/anuncios.php">Anuncios</a>
                         <a href="/bienesraices/blog.php">Blog</a>
                         <a href="/bienesraices/admin/index2.php">Contacto</a>
