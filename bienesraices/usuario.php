@@ -4,8 +4,8 @@
 //require 'includes/app.php';
 include './aux2.php';
 $db = new DAO();
-
-
+echo "sdfjklng";
+/*
 // Crear un email y password
 $email = "admin@gmail.com";
 $password = "admin1234";
@@ -23,4 +23,5 @@ echo "si";
 
 // Agregarlo a la base de datos
 //mysqli_query($db, $query);
+*/
 
