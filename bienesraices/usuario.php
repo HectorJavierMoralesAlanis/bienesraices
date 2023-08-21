@@ -4,7 +4,7 @@
 //require 'includes/app.php';
 include './aux2.php';
 $db = new DAO();
-echo $db;
+echo "djksfb";
 
 // Crear un email y password
 $email = "admin@gmail.com";
