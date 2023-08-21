@@ -20,7 +20,7 @@
             $errores[] = "El password es obligatorio";
         }
         // Revisar si el usuario existe
-        $query = "SELECT * FROM usuarios"."WHERE email = :email";
+        $query = "SELECT * FROM usuarios WHERE email = :email";
         $parametros = array("email"=>$email);
         $resultado = $db->ejecutarConsulta($query,$parametros);
         echo "dsjklfn";
