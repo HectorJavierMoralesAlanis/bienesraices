@@ -17,7 +17,7 @@ $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':passw
 
 $parametros=array("email"=>$email,"password"=>$passwordHash);
 
-$resultado=$dao->insertatConsulta($consulta,$parametros);
+$resultado=$dao->insertarConsulta($consulta,$parametros);
 
 //echo $query;
 
