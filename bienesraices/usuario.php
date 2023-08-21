@@ -5,13 +5,13 @@
 include './aux2.php';
 $db = new DAO();
 echo "sdfjklng";
-/*
+
 // Crear un email y password
 $email = "admin@gmail.com";
 $password = "admin1234";
 
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
-
+/*
 // Query para crear el usuario
 $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':password)";
 
