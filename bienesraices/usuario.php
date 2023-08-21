@@ -2,7 +2,7 @@
 // Importar la conexion
 //Incluye el header
 //require 'includes/app.php';
-include '../bienesraices/aux2.php';
+include 'aux2.php';
 $db = new DAO();
 
 
