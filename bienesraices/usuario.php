@@ -17,9 +17,10 @@ $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':passw
 
 $parametros=array("email"=>"$email","password"=>"$passwordHash");
 
-$resultado=$db->insertarConsulta($consulta,$parametros);
+$resultados=$db->insertarConsulta($consulta,$parametros);
 
-echo $resultado;
+foreach($resultado as $resultado)
+    echo $resultado;
 
 // Agregarlo a la base de datos
 //mysqli_query($db, $query);
