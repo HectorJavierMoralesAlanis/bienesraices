@@ -2,7 +2,7 @@
 // Importar la conexion
 //Incluye el header
 //require 'includes/app.php';
-include 'aux2.php';
+include '../bienesraices/aux2.php';
 $db = new DAO();
 
 
@@ -15,11 +15,11 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 // Query para crear el usuario
 $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':password)";
 
-$parametros=array("email"=>$email,"password"=>$passwordHash);
+$parametros=array("email"=>"$email","password"=>"$passwordHash");
 
 $resultado=$dao->insertarConsulta($consulta,$parametros);
 
-//echo $query;
+echo "si";
 
 // Agregarlo a la base de datos
 //mysqli_query($db, $query);
