@@ -8,6 +8,7 @@
 
     $errores = [];
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        echo "dsfkjfbn";
         $email =  (filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL));
         $password = (filter_var($_POST['password']));
 
