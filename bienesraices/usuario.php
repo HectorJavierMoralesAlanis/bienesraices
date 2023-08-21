@@ -11,12 +11,12 @@ $email = "admin@gmail.com";
 $password = "admin1234";
 
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
-/*
+
 // Query para crear el usuario
 $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':password)";
 
 $parametros=array("email"=>"$email","password"=>"$passwordHash");
-
+/*
 $dao->insertarConsulta($consulta,$parametros);
 
 echo "si";
