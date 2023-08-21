@@ -21,8 +21,9 @@
         }
 
         // Revisar si el usuario existe
-        $query = "SELECT * FROM usuarios"."WHERE email = $email";
-        $resultado = $db->ejecutarConsulta($query);
+        $query = "SELECT * FROM usuarios"."WHERE email = :email";
+        $parametros = array("email"=>$email);
+        $resultado = $db->ejecutarConsulta($query,$parametros);
         if($resultado!==NULL){
             // Revisar si el password es correcto
             foreach ($resultado as $usuarios):
