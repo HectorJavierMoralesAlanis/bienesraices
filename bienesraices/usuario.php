@@ -16,9 +16,9 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':password)";
 
 $parametros=array("email"=>"$email","password"=>"$passwordHash");
-/*
-$dao->insertarConsulta($consulta,$parametros);
 
+$dao->insertarConsulta($consulta,$parametros);
+/*
 echo "si";
 
 // Agregarlo a la base de datos
