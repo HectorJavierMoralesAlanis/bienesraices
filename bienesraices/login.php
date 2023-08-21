@@ -19,12 +19,11 @@
         if(!$password){
             $errores[] = "El password es obligatorio";
         }
-        
+
         // Revisar si el usuario existe
         $query = "SELECT * FROM usuarios WHERE email = :email";
         $parametros = array("email"=>$email);
         $resultado = $db->ejecutarConsulta($query,$parametros);
-        echo "dsjklfn";
         if($resultado!==NULL){
             // Revisar si el password es correcto
             foreach ($resultado as $usuarios):

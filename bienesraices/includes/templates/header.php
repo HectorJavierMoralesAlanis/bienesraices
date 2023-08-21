@@ -25,7 +25,7 @@
                         <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/nosotros.php">Nosotros</a>
                         <a href="<?php $_SERVER['SERVER_NAME']?>/bienesraices/anuncios.php">Anuncios</a>
                         <a href="/bienesraices/blog.php">Blog</a>
-                        <a href="/bienesraices/admin/index2.php">Contacto</a>
+                        <a href="/bienesraices/contacto.php">Contacto</a>
                     </nav>
                 </div>
                 
