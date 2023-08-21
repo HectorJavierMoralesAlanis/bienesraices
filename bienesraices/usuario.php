@@ -14,7 +14,6 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
 // Query para crear el usuario
 $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':password')";
-
 $parametros=array("email"=>$email,"password"=>$passwordHash);
 
 $resultados=$db->insertarConsulta($consulta,$parametros);
