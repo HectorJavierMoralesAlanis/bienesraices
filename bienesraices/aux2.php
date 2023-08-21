@@ -1,5 +1,5 @@
 <?php
-
+echo "si";
     class DAO{
         //Se crea la variable conexion
         private $conexion;
