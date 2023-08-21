@@ -17,11 +17,11 @@ $consulta = "INSERT INTO usuarios (email, password) "."VALUES (':email', ':passw
 
 $parametros=array("email"=>"$email","password"=>"$passwordHash");
 
-$dao->insertarConsulta($consulta,$parametros);
-/*
-echo "si";
+$resultado=$dao->insertarConsulta($consulta,$parametros);
+
+echo $resultado;
 
 // Agregarlo a la base de datos
 //mysqli_query($db, $query);
-*/
+
 
